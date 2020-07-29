@@ -1,7 +1,7 @@
 #!/bin/bash
 
-product_version=$(cat .version)
-semver=( ${product_version//./ } )
+version=$(cat .version)
+semver=( ${version//./ } )
 ma="${semver[0]}"
 mi="${semver[1]}"
 p="${semver[2]}"
