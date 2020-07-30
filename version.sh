@@ -26,5 +26,11 @@ elif [[ $ver_type == "1" ]]; then
   mi=0
 fi
 
-echo "${ma}.${mi}.${p}" > .version
-cat .version
+echo "The new version number is: ${ma}.${mi}.${p}"
+read -r -p "Is this the correct version number? (y/n) " yesno
+if [ "$yesno" != "${yesno#[Yy]}" ]; then
+  echo "${ma}.${mi}.${p}" > .version
+else
+  echo "Canceling."
+  exit 0
+fi
