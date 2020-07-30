@@ -11,7 +11,7 @@ read -p "Enter a number: (1. Major | 2. Minor | 3. Patch) "  ver_type
 if [ $ver_type != "1" ] && [ $ver_type != "2" ] && [ $ver_type != "3" ];
 then
   echo "Invalid input"
-  exit
+  exit 0
 fi
 
 if [[ $ver_type == "3" ]];
