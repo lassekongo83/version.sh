@@ -31,6 +31,6 @@ read -r -p "Is this the correct version number? (y/n) " yesno
 if [ "$yesno" != "${yesno#[Yy]}" ]; then
   echo "${ma}.${mi}.${p}" > .version
 else
-  echo "Canceling."
+  echo "Script canceled by user."
   exit 0
 fi
